@@ -1,0 +1,54 @@
+{
+    "crossword": [
+        {"id":1, "question": "tysiąc kilogramów", "answer": "tona"},
+        {"id":2, "question": "sąsiadka szwajcarki", "answer": "włoszka"},
+        {"id":3, "question": "judaszowe pieniądze", "answer": "srebrniki"},
+        {"id":4, "question": "zodiaku lub drogowy", "answer": "znak"},
+        {"id":5, "question": "zachomikowane parę groszy", "answer": "zaskórniak"},
+        {"id":6, "question": "dawna kolia", "answer": "kanak"},
+        {"id":7, "question": "ziemi - pługiem", "answer": "oranie"},
+        {"id":8, "question": "nad nią lata cyrkowy akrobata", "answer": "arena"},
+        {"id":9, "question": "kolor lub owoc", "answer": "granat"},
+        {"id":10, "question": "bogini miłości w mitologii greckiej", "answer": "afrodyta"},
+        {"id":11, "question": "japońska sztuka papierystyki", "answer": "origami"},
+        {"id":12, "question": "znany rajd terenowy", "answer": "dakar"},
+        {"id":13, "question": "kochał penelopę", "answer": "odys"},
+        {"id":14, "question": "noga tygrysa", "answer": "łapa"},
+        {"id":15, "question": "ciasto z bakaliami", "answer": "keks"},
+        {"id":16, "question": "skórki cytryny osmażone w cukrze", "answer": "cykata"},
+        {"id":17, "question": "może zagrać don juana", "answer": "amant"},
+        {"id":18, "question": "media", "answer": "publikatory"},
+        {"id":19, "question": "góralski ser", "answer": "oscypek"},
+        {"id":20, "question": "królewski powóz", "answer": "kareta"},
+        {"id":21, "question": "okręt jazona", "answer": "argo"},
+        {"id":22, "question": "z baldachimem", "answer": "łoże"},
+        {"id":23, "question": "pensja szeregowca", "answer": "żołd"},
+        {"id":24, "question": "lecznicza bylina o silnej woni", "answer": "ruta"},
+        {"id":25, "question": "imię wielu psów", "answer": "azor"},
+        {"id":26, "question": "wypierane przez zapalniczki", "answer": "zapałki"},
+        {"id":27, "question": "damske uczesanie", "answer": "kok"},
+        {"id":28, "question": "duża papuga", "answer": "ara"},
+        {"id":29, "question": "odtrącony przez izabelę łęcką", "answer": "wokulski"},
+        {"id":30, "question": "określone grupy osób", "answer": "koła"},
+        {"id":31, "question": "apacz lub irokez", "answer": "indianin"},
+        {"id":32, "question": "sąsiad szweda", "answer": "fin"},
+        {"id":33, "question": "koszenie i suszenie traw", "answer": "sianokosy"},
+        {"id":34, "question": "sprawczyni wypadku", "answer": "winna"},
+        {"id":35, "question": "drwina", "answer": "kpina"},
+        {"id":36, "question": "wyciskanie soku z winogron", "answer": "tłoczenie"},
+        {"id":37, "question": "taneczka muzyka", "answer": "disco"},
+        {"id":38, "question": "szumią na szczycie gór", "answer": "jodły"},
+        {"id":39, "question": "przybita do lewarów", "answer": "deska"},
+        {"id":40, "question": "produkt z walcowni", "answer": "blacha"},
+        {"id":41, "question": "nóz chirurgiczny", "answer": "kancet"}
+
+
+
+
+
+
+
+
+
+    ] 
+}

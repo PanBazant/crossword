@@ -7,6 +7,7 @@ import random
 app = FastAPI()
 
 current_crossword = []
+validated_answers = []
 
 origins = [
     "https://localhost:5500",
@@ -57,11 +58,32 @@ async def verify_answer(data = Body()):
     #     await data_file.write(str(data))
 
     print(data)
+    crossword_solved = False
+
     answer_verification = False
     for i in current_crossword:
         if data["answerToValidation"]["id"] == i["id"]:
             if i["answer"] == data["answerToValidation"]["answer"]:
-                return True
+                validated_answers.append(i)
+                print(validated_answers)
+                print("validated")
+                answer_verification = True
             break
+    if answer_verification == False:
+        return {"result": [answer_verification, crossword_solved]}
+
+    solving_counter = 0
+    print(f"current_crossword length: {len(current_crossword)}")
+    for i in current_crossword:
+        if i not in validated_answers:
+            print(i)
+            solving_counter +=1
+            print(f"solving_counter : {solving_counter}")
+
+    if solving_counter == 0:
+        crossword_solved = True
+        print("Wygrałeś")
+    
     print(answer_verification)
-    return {"result": answer_verification}
+    #print(current_crossword)
+    return {"result": [answer_verification, crossword_solved]}

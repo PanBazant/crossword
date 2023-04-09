@@ -57,7 +57,20 @@ async function validAnswer(){
         try { e.preventDefault();
         
           if (e.key === "Backspace") { 
+            for(let i =1; i < e.target.parentNode.children.length; i++){
+              if (e.target.parentNode.children[i].classList.contains("correct")){
+                console.log(e.target.parentNode.children[i].classList)
+                e.target.parentNode.children[i].classList.remove("correct")
+              }
+
+               if (e.target.parentNode.children[i].classList.contains("wrong")){
+                console.log(e.target.parentNode.children[i].classList)
+                e.target.parentNode.children[i].classList.remove("wrong")
+
+              }
+            }
             e.target.previousElementSibling.focus();
+          
             if (e.target.textContent === "") {
               e.target.previousElementSibling.focus();
               console.log("puste");
@@ -73,7 +86,7 @@ async function validAnswer(){
           } else if (e.keyCode === 40) {
             e.target.parentNode.nextElementSibling.children[1].focus();
             console.log(e.target.parentNode.nextElementSibling.children[1]);
-          } else if (e.key.match(/^[a-ząćęłńóśź]$/) && !(e.altKey || e.metaKey || e.ctrlKey)) {
+          } else if (e.key.match(/^[a-ząćęłńóśżź]$/) && !(e.altKey || e.metaKey || e.ctrlKey)) {
             e.target.textContent = e.key;
             if (e.target.nextElementSibling !== null) {
               e.target.nextElementSibling.focus();
@@ -115,17 +128,34 @@ async function validAnswer(){
 
         console.log(postFetch)
 
-        if (postFetch["result"]===false){
-          for(let i =1; e.target.parentNode.children.length; i++){
-            e.target.parentNode.children[i].classList.remove("correct")
+        
+
+        if (postFetch["result"][0]===false){
+          for(let i =1; i < e.target.parentNode.children.length; i++){
+
+            if (e.target.parentNode.children[i].classList.contains("correct")){
+              e.target.parentNode.children[i].classList.remove("correct")
+            }
             e.target.parentNode.children[i].classList.add("wrong")
           }
         } else {
 
-            for(let i =1; e.target.parentNode.children.length; i++){
-            e.target.parentNode.children[i].classList.remove("wrong")
-            e.target.parentNode.children[i].classList.add("correct")
+            for(let i =1; i < e.target.parentNode.children.length; i++){
+              if (e.target.parentNode.children[i].classList.contains("wrong")){
+                e.target.parentNode.children[i].classList.remove("wrong")
+
+              }
+                          e.target.parentNode.children[i].classList.add("correct")
+
+
           }        }
+
+          if (postFetch["result"][1]===true){
+            const win = document.createElement("div")
+            win.classList.add("win-bar")
+            win.textContent = "Wygrałeś !!!"
+            x.appendChild(win)
+          } 
 
             }
       }
